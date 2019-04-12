@@ -31,6 +31,7 @@ typedef struct	s_filler
 	int			map_y;
 	int			i;
 	int			j;
+	int			p_dist;
 	int			piece_x;
 	int			piece_y;
 	int			my_x;
@@ -42,10 +43,13 @@ typedef struct	s_filler
 	char		**map;
 	char		*line;
 	char		**piece;
-	char		symb[3];
+	char		symb[3];//symb[0] - это я
 }				t_filler;
 
 
 int				get_next_line(const int fd, char **line);
+int				ft_abs(int a);
+void			free_free(char **arr);
+void			piece_size(t_filler *t);
 
 #endif
