@@ -66,7 +66,6 @@ static	void	*poshuk(char **ptr, char const *s, char c)
 		{
 			k = kbukv(&s[i], c);
 			i = i + k;
-			ptr[j] = (char *)malloc(sizeof(char) * (k + 1));
 			ptr[j] = ft_strsub(s, i - k, k);
 			j++;
 		}

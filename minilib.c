@@ -22,12 +22,11 @@ void	free_free(char **arr)
 	int		i;
 
 	i = 0;
-	while (arr[i] != NULL)
+	while (arr[i])
 	{
 		free(arr[i]);
 		i++;
 	}
-	free(arr);
 }
 
 void	piece_size(t_filler *t)
@@ -38,5 +37,7 @@ void	piece_size(t_filler *t)
 	t->piece_x = ft_atoi(s[1]);
 	t->piece_y = ft_atoi(s[2]);
 	t->piece = (char**)malloc(sizeof(char*) * t->piece_x + 1);
-	// free_free(s);
+	t->piece[t->piece_x] = NULL;
+	free_free(s);
+	free(s);
 }

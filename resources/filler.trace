@@ -1,6 +1,4 @@
-seed = 1416
-X: timedout
-../itishche.filler: Segfault at 0
-../itishche.filler won
+seed = 1351
+players/grati.filler won
 Score:
-0AGAINST0
+75AGAINST76
